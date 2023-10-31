@@ -1,0 +1,21 @@
+<!-- edit.ejs -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Edit Blog Post</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <h1>Edit Blog Post</h1>
+    <form method="post" action="/edit/<%= postId %>">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" value="<%= post.title %>" required>
+        <br>
+        <label for="description">Description:</label>
+        <textarea name="description" id="description" required><%= post.description %></textarea>
+        <br>
+        <input type="submit" value="Save Changes">
+    </form>
+    <a href="/">Back to Home</a>
+</body>
+</html>

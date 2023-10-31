@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Blog Post</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <h1>Add Blog Post</h1>
+    <form method="post" action="/add">
+        <label for="title">Title:</label>
+        <input type="text" name="title" id="title" required>
+        <br>
+        <label for="description">Description:</label>
+        <textarea name="description" id="description" required></textarea>
+        <br>
+        <input type="submit" value="Add Post">
+    </form>
+    <form action="/" method="get">
+        <button type="submit">Home</button>
+    </form>
+</body>
+</html>

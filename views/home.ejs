@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blog</title>
+    <link rel="stylesheet" type="text/css" href="/styles.css">
+</head>
+<body>
+    <h1>MY Blog</h1>
+    <ul>
+        <% posts.forEach((post, index) => { %>
+            <li>
+                <h2><%= post.title %></h2>
+                <p><%= post.description.substring(0, 100) %></p>
+                <% if (post.description.length > 100) { %>
+                    <a href="/readmore/<%= index %>">Read More</a>
+                <% } %>
+                <a href="/edit/<%= index %>">Edit</a>
+                <p>Date: <%= post.date %></p>
+            </li>
+        <% }); %>
+    </ul>
+    <form action="/add" method="get">
+        <button type="submit">Add block</button>
+    </form>
+</body>
+</html>
